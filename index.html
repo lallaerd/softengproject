@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard | Study Smarter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>✦ Flashcard</h2>
+      <p>Your study workspace</p>
+
+      <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#create">Create Flashcard</a>
+        <a href="#library">My Flashcards</a>
+        <a href="#study">Study Mode</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+      <section id="dashboard">
+        <p>YOUR STUDY DASHBOARD</p>
+        <h1>Welcome to Flashcard!</h1>
+        <p>Organize your notes, create flashcards,
+           and study smarter every day.</p>
+
+        <div class="stats">
+          <div class="stat-card">
+            <h2 id="totalCards">0</h2>
+            <p>Total Flashcards</p>
+          </div>
+
+          <div class="stat-card">
+            <h2 id="highPriority">0</h2>
+            <p>High Priority</p>
+          </div>
+
+          <div class="stat-card">
+            <h2 id="totalSubjects">0</h2>
+            <p>Subjects</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Create flashcard -->
+      <section id="create">
+        <h2>Create a Flashcard</h2>
+
+        <form id="flashcardForm">
+          <label for="question">Question</label>
+          <textarea id="question" placeholder="Enter your question"></textarea>
+
+          <label for="answer">Answer</label>
+          <textarea id="answer" placeholder="Enter your answer"></textarea>
+
+          <label for="hint">Hint (optional)</label>
+          <input id="hint" placeholder="Add a helpful hint">
+
+          <label for="tags">Tags / Subject</label>
+          <input id="tags" placeholder="e.g. Biology, Math">
+
+          <label for="priority">Priority</label>
+          <select id="priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <button type="submit">+ Create Flashcard</button>
+          <p id="formMessage" role="status"></p>
+        </form>
+      </section>
+
+      <!-- Flashcard library -->
+      <section id="library">
+        <h2>My Flashcards</h2>
+
+        <input id="search" placeholder="Search flashcards...">
+
+        <select id="priorityFilter">
+          <option value="All">All priorities</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <div id="flashcardList"></div>
+      </section>
+
+      <!-- Study mode -->
+      <section id="study">
+        <h2>Study Mode</h2>
+        <p>Practice your flashcards and test your memory.</p>
+        <div id="studyArea"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
